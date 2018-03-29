@@ -34,7 +34,7 @@ public class MongoSimpleCommandTest {
 
     @Test
     @Ignore
-    public void createCollection(){
+    public void createCollection() {
 
         MongoIterable<String> collections = db.listCollectionNames();
         MongoCursor<String> iterator = collections.iterator();
@@ -59,8 +59,8 @@ public class MongoSimpleCommandTest {
                 .append("edition", "November December 2013")
                 .append("year", 2015)
                 .append("income",900)
-                .append("title", "Engineering as a Service").append("author",
-                        "David A. Kelly");
+                .append("title", "Engineering as a Service")
+                .append("author", "David A. Kelly");
 
 
         book.insertOne(catalog);
