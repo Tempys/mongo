@@ -73,7 +73,7 @@ public class StudentRepositoryTest {
                           .first("student_id").as("studentId")
                           //.first("$$ROOT").as("root_id")
                           .first("$type").as("type")
-                         .min("$score").as("score")
+                          .min("$score").as("score")
 
         );
 

@@ -1,9 +1,15 @@
 spring:
   data:
     mongodb:
-      database: video
+      database: school
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: test
 
+
+
+
+logging:
+     level.org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+     level: debug

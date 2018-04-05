@@ -1,0 +1,23 @@
+
+  db.students.aggregate( [
+  // {"$match": {"_id":137}} ,
+
+  {
+    "$unwind": "$scores"
+  },
+  {
+    "$match": {
+      'scores.type': "homework"
+    }
+  },
+  {
+    "$group": {
+      "_id": "$_id",
+      "min": {
+        "$min": "$scores.score"
+      }
+    }
+  }
+]  )
+
+

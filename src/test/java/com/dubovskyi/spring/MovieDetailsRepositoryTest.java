@@ -41,4 +41,20 @@ public class MovieDetailsRepositoryTest {
      movieDetails.forEach(System.out::println);
 
     }
+
+    @Test
+    public void SwedenFilmsCountTest(){
+        Query query = new Query(
+                Criteria.where("countries.1").is("Sweden")
+
+        );
+
+
+        List<MovieDetails>  movieDetails =  mongoTemplate.find(query,MovieDetails.class);
+
+        System.out.println(mongoTemplate.find(query,MovieDetails.class).size());
+
+        movieDetails.forEach(System.out::println);
+    }
+
 }
