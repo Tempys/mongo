@@ -1,6 +1,5 @@
 package com.dubovskyi.hw3;
 
-
 import com.dubovskyi.mongo.MongoApplication;
 import com.dubovskyi.mongo.spring.domain.Students;
 import com.dubovskyi.mongo.spring.domain.StudentsDto1;
@@ -31,7 +30,6 @@ public class StudentsRepositoryTest {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-
     @Test
     public void findAllTest() {
         List<Students> students = mongoTemplate.findAll(Students.class);
@@ -40,7 +38,6 @@ public class StudentsRepositoryTest {
         System.out.println("students: " + students);
         Assert.assertTrue(students.size() > 0);
     }
-
 
     @Test
     public void removeStudentByMinScore() {
@@ -71,8 +68,6 @@ public class StudentsRepositoryTest {
         );
 
     }
-
-
 
 }
 
